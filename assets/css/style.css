@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+ :root {
+    --primary-color: #F5C249;
+    --bg-color: #16171D;
+    --text-color: #A7AEBF;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.container {
+    padding: 30px 5rem;
+    margin-bottom: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.logo-1 {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-list {
+    color: var(--text-color);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-list:hover {
+    color: var(--primary-color);
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button-login {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.menu-icon {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Responsif untuk mobile */
+
+
+/* Styling untuk navigasi responsif */
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+.nav-overlay.open {
+    right: 0;
+}
+
+
+/* Header dalam navigasi overlay */
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Daftar navigasi */
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    color: var(--text-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--text-color);
+    width: 100%;
+    background-color: #F5C249;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .button-login {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+/* home section */
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.home-title {
+    font-size: 48px;
+    color: white;
+}
+
+.home-text {
+    color: var(--text-color);
+    padding-bottom: 1rem;
+}
+
+.button-home {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+
+/* end home section */
+
+
+/* box section */
+
+.box {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 150px;
+    text-align: center;
+}
+
+.box-img {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.box-content {
+    min-height: 250px;
+    padding: 1rem;
+    border: var(--text-color) 1px solid;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.title-box {
+    font-size: 20px;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.box-text {
+    color: var(--text-color);
+}
+
+
+/* end box section */
+
+
+/* page-3 section */
+
+
+/* Page-3 section */
+
+.page-3 {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+    padding: 2rem 0;
+}
+
+.page-3-img img {
+    width: 480px;
+    height: auto;
+    object-fit: contain;
+}
+
+.page-3-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272933;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    height: 100%;
+    /* Agar full tinggi container */
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 360px;
+}
+
+.text-form {
+    padding: 10px;
+    background-color: #16171D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    /* Agar menyesuaikan dengan kontainer */
+}
+
+.button-form {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.portfolio-transaction h2 {
+    color: white;
+}
+
+.transaction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.transaction-card {
+    background-color: #161b22;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    /* Menambahkan posisi relatif untuk container */
+}
+
+.img-transaction-card {
+    position: relative;
+}
+
+.img-transaction-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.date-card {
+    position: absolute;
+    background-color: #F5C249;
+    color: black;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: -20px;
+    margin-left: 75px;
+    margin-bottom: 0px;
+}
+
+.transaction-card p {
+    color: var(--text-color);
+}
+
+.text-card {
+    color: white;
+}
+
+
+/* end page-3 section */
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5rem;
+    border-top: solid 1px #414752;
+}
+
+.footer-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footer-title span {
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links i {
+    font-size: 20px;
+    background-color: #A7AEBF;
+    color: #16171D;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse;
+        /* Menukar urutan */
+        text-align: center;
+    }
+    .home-text {
+        flex: 2;
+        width: 100%;
+    }
+    .home-img {
+        flex: 1;
+        width: 100%;
+    }
+    .home-title {
+        font-size: 32px;
+    }
+    .box {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .page-3 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .page-3-img img {
+        width: 100%;
+    }
+    .transaction-grid {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
